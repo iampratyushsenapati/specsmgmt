@@ -1,14 +1,16 @@
-import React, {useState}from 'react';
+// import React, {useState}from 'react';
 import{Link} from 'react-router-dom';
 import axios from 'axios';
 import{useNavigate} from 'react-router-dom';
 
 
-const createHotel =()=> {
+const createHotel =(props)=> {
     return(
         <div className='createHotel'>
             <div className='container'>
-                <h1>This is Create hotel page </h1>
+        <div className='row'> 
+         <h1>This is Create hotel page </h1>
+         </div>
             </div>
         </div>
     );
