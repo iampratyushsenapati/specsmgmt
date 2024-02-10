@@ -6,7 +6,7 @@ import CreateHotel from'./components/CreateHotel';
 import ShowHotellist from'./components/ShowHotellist';
 import ShowHotelDetails from'./components/ShowHotelDetails';
 import UpdateHotelinfo from'./components/UpdateHotelinfo';
-import HotelCard from'./components/HotelCardb  ';
+import HotelCard from'./components/HotelCard';
 
 const App=() =>{
   return (
