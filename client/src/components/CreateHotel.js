@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
-import { Slide, ToastContainer, toast } from 'react-toastify';
+//import { Slide, ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 import axios from 'axios';
@@ -9,19 +9,21 @@ import Footer from './Footer';
 import Navbar from './Navbar';
 
 const CreateHotel = (props) => {
+
     const navigate = useNavigate();
     const [hotel, setHotel] = useState({
-       hotel_name : '',
+        hotel_name: '',
         customer_name: '',
         gender: '',
-        place:'',
+        place: '',
         date: '',
         price: '',
-    });
+    })
+
     //    const[ShowToast, setShowToast] = useState(false);
     const onChange = (e) => {
         setHotel({ ...hotel, [e.target.name]: e.target.value });
-    };
+    }
 
     const onSubmit = (e) => {
 
@@ -29,15 +31,18 @@ const CreateHotel = (props) => {
         e.preventDefault();
 
         //  API calls with the help of axios
-        axios.post('/api/hotels', hotel)
+        axios
+            .post('/api/hotels', hotel)
             .then((res) => {
                 setHotel({
                     hotel_name: "",
                     customer_name: "",
                     gender: "",
+                    place:"",
                     date: "",
                     price: ""
                 })
+                navigate("/")
             })
     }
 
@@ -74,6 +79,7 @@ const CreateHotel = (props) => {
                                 <input
                                     type='text'
                                     placeholder='Name of the Hotel'
+                                    name='hotel_name'
                                     className='form-control'
                                     value={hotel.hotel_name}
                                     onChange={onChange}
@@ -85,8 +91,10 @@ const CreateHotel = (props) => {
                                 <input
                                     type='text'
                                     placeholder='Customer Name'
+                                    name='customer_name'
                                     className='form-control'
                                     value={hotel.customer_name}
+                                    onChange={onChange}
                                 />
                             </div>
 
@@ -95,8 +103,10 @@ const CreateHotel = (props) => {
                                 <input
                                     type='text'
                                     placeholder='Gender'
+                                    name='gender'
                                     className='form-control'
                                     value={hotel.gender}
+                                    onChange={onChange}
                                 />
                             </div>
 
@@ -105,8 +115,10 @@ const CreateHotel = (props) => {
                                 <input
                                     type='date'
                                     placeholder='entry-date'
+                                    name='date'
                                     className='form-control'
                                     value={hotel.date}
+                                    onChange={onChange}
                                 />
                             </div>
 
@@ -115,8 +127,10 @@ const CreateHotel = (props) => {
                                 <input
                                     type='number'
                                     placeholder='price'
+                                    name='price'
                                     className='form-control'
                                     value={hotel.price}
+                                    onChange={onChange}
                                 />
                             </div>
 
