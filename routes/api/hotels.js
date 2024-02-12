@@ -19,14 +19,14 @@ router.get("/",(req,res) => {
     res.json({OK: "All hotel route working fine"})
 });
 
-// @route GET api/hotels/:id
+//@route GET api/hotels/:id
 // @description Get single hotel details by searching for the ID
 // @access public
 // READ and SEARCH operation
 router.get("/:id", (req,res) => {
-    // hotel.findById(req.params.id)
-    // .then((hotel) => res.json(hotel))
-    // .catch((err) => res.status(404).json({ nohotelfound: "Could not find the hotel"}))
+    hotel.findById(req.params.id)
+    .then((hotel) => res.json(hotel))
+    .catch((err) => res.status(404).json({ nohotelfound: "Could not find the hotel"}))
     res.json({
         OK:"Get Hotel By Id route is working fine"
     })
@@ -38,9 +38,9 @@ router.get("/:id", (req,res) => {
 // CREATE operation
 
 router.post("/", (req,res) => {
-    // hotel.create(req.body)
-    // .then((hotel) => res.json(msg:"A new hotel was created successfully"))
-    // .catch((err) => res.status(404).json({ nohotelfound: "Could not create the hotel"}))
+    hotel.create(req.body)
+    .then((hotel) => res.json( {msg: "A new hotel was created successfully"}))
+    .catch((err) => res.status(404).json({ nohotelfound: "Could not create the hotel"}))
     res.json({
         OK:"Create a hotel successfully"
     })
