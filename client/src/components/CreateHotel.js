@@ -57,10 +57,10 @@ const CreateHotel = (props) => {
     return (
         <div className='CreateHotel'>
             <Navbar />
-            {/* <ToastContainer 
-            position="top-right"
-            tranistion={slide}
-            /> */}
+            {/* <ToastContainer
+    position="top-right"
+    tranistion={slide}
+    /> */}
 
             <div className='container'>
                 <div className='row'>
@@ -74,77 +74,71 @@ const CreateHotel = (props) => {
                         <h1 className='display-4 text-center'>Add Hotel</h1>
                         <p className='lead text-center'>Create new Hotel</p>
 
-                        {<form noValidate onSubmit={onSubmit}>
-                            <div className='form-group'>
-                                <input
-                                    type='text'
-                                    placeholder='Name of the Hotel'
-                                    name='hotel_name'
-                                    className='form-control'
-                                    value={hotel.hotel_name}
-                                    onChange={onChange}
-                                />
-                            </div>
-
-
-                            <div className='form-group'>
-                                <input
-                                    type='text'
-                                    placeholder='Customer Name'
-                                    name='customer_name'
-                                    className='form-control'
-                                    value={hotel.customer_name}
-                                    onChange={onChange}
-                                />
-                            </div>
-
-
-                            <div className='form-group'>
-                                <input
-                                    type='text'
-                                    placeholder='Gender'
-                                    name='gender'
-                                    className='form-control'
-                                    value={hotel.gender}
-                                    onChange={onChange}
-                                />
-                            </div>
-
-
-                            <div className='form-group'>
-                                <input
-                                    type='date'
-                                    placeholder='entry-date'
-                                    name='date'
-                                    className='form-control'
-                                    value={hotel.date}
-                                    onChange={onChange}
-                                />
-                            </div>
-
-
-                            <div className='form-group'>
-                                <input
-                                    type='number'
-                                    placeholder='price'
-                                    name='price'
-                                    className='form-control'
-                                    value={hotel.price}
-                                    onChange={onChange}
-                                />
-                            </div>
-
-
+                        <form noValidate onSubmit={onSubmit}>
+                          <div className='form-group'>
                             <input
-                                type='submit'
-                                className='btn btn-outline-warning btn-block mt-4'
-                            />
+                                type='text'
+                                placeholder='Name of the Hotel'
+                                name='hotel_name'
+                                className='form-control'
+                                value={hotel.hotel_name}
+                                onChange={onChange} />
+                        </div>
 
-                        </form>}
-                    </div>
+
+                        <div className='form-group'>
+                            <input
+                                type='text'
+                                placeholder='Customer Name'
+                                name='customer_name'
+                                className='form-control'
+                                value={hotel.customer_name}
+                                onChange={onChange} />
+                        </div>
+
+
+                        <div className='form-group'>
+                            <input
+                                type='text'
+                                placeholder='Gender'
+                                name='gender'
+                                className='form-control'
+                                value={hotel.gender}
+                                onChange={onChange} />
+                        </div>
+
+
+                        <div className='form-group'>
+                            <input
+                                type='date'
+                                placeholder='entry-date'
+                                name='date'
+                                className='form-control'
+                                value={hotel.date}
+                                onChange={onChange} />
+                        </div>
+
+
+                        <div className='form-group'>
+                            <input
+                                type='number'
+                                placeholder='price'
+                                name='price'
+                                className='form-control'
+                                value={hotel.price}
+                                onChange={onChange} />
+                        </div>
+
+
+                        <input
+                            type='submit'
+                            className='btn btn-outline-warning btn-block mt-4' />
+
+                    </form>
                 </div>
             </div>
-            <Footer />
+          </div>  
+        <Footer />
         </div>
     );
 };

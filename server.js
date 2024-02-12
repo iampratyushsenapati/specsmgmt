@@ -3,7 +3,7 @@ const connectDB = require("./config/db");
 const cors = require("cors");
 const hotels = require("./routes/api/hotels");
 const path = require('path');
-require("dotenv").config({ path: "./config.env" })
+require("dotenv").config({ path: "./.env" })
 
 //connecting Tom DB
 connectDB();
