@@ -1,10 +1,11 @@
-const mongoose = require("mongoose");
+
+const mongoose = require("mongoose")
 const connectDB = async() => {
     try{
         mongoose.set("strictQuery", true);
        await mongoose.connect(process.env.DB_URI,
         {
-             useNewUrlParser: true,
+             useNewUrlParser: true, 
          })
          .then( () => { 
             console.log("Successfully connected to mongoDB");
@@ -16,4 +17,4 @@ const connectDB = async() => {
     }
 };
 
-module.exports = connectDB
+module.exports = connectDB;

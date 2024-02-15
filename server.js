@@ -3,7 +3,7 @@ const connectDB = require("./config/db")
 const cors = require("cors")
 const hotels = require("./routes/api/hotels")
 const path = require('path');
-require("dotenv").config( { path: "./config.env" } )
+require("dotenv").config( { path: "./.env" } )
 
 // CONNECTING TO DB
 connectDB()
@@ -14,7 +14,7 @@ const app = express()
 // HANDLING MIDDLEWARE
 app.use(express.json());
 app.use(cors());
-app.use("/api/hotels", hotels);
+app.use("/api/hotels", hotels)
 
 // STATIC FILES
 app.use(express.static(path.join(__dirname, "./client/build")));
