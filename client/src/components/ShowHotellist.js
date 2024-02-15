@@ -1,10 +1,10 @@
-import React, {useState , useEffect}from 'react';
-import{Link} from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import '../App.css';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 import HotelCard from './HotelCard';
 
-
-const ShowHotellist =(props)=> {
+function ShowHotellist () {
 
         const [hotels, setHotels] = useState([]);
 
@@ -23,7 +23,7 @@ const ShowHotellist =(props)=> {
         const hotelList =
           hotels.length === 0
             ? 'there is no book record!'
-            : hotels.map((hotel, k) => <HotelCard book={hotel} key={k} />);
+            : hotels.map((hotel, k) => <HotelCard hotel={hotel} key={k} />);
       
         return (
           <div className='ShowHotellist'>
