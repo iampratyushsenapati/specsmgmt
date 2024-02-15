@@ -18,6 +18,7 @@ const App=() =>{
 <Router>
   <div>
     <Navbar/>
+    
     <Routes>
     <Route exact path='/' element={<Home/>}/>
       <Route  path='/all-hotel' element={<ShowHotellist/>}/>
