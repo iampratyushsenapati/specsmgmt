@@ -5,8 +5,8 @@ import { Slide, ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 import axios from 'axios';
-import Footer from './Footer';
-import Navbar from './Navbar';
+// import Footer from './Footer';
+// import Navbar from './Navbar';
 
 const CreateHotel = (props) => {
 
@@ -88,7 +88,7 @@ const CreateHotel = (props) => {
 
     return (
         <div className='CreateHotel'>
-            <Navbar />
+            {/* <Navbar /> */}
             <ToastContainer
                 position="top-right"
                 autoClose={5000}
@@ -107,7 +107,7 @@ const CreateHotel = (props) => {
                 <div className='row'>
                     <div className='col-md-8 m-auto'>
                         <br />
-                        <Link to='/all-tickets' className='btn btn-outline-warning float-left'>
+                        <Link to='/all-hotel' className='btn btn-outline-warning float-left'>
                             Show Hotel List
                         </Link>
                     </div>
@@ -185,7 +185,7 @@ const CreateHotel = (props) => {
                     </div>
                 </div>
             </div>
-            <Footer />
+            {/* <Footer /> */}
         </div>
     );
 };

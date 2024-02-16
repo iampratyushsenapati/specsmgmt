@@ -1,6 +1,6 @@
 import React from "react";
 import { Outlet } from 'react-router-dom'
-const Footer = () => (
+function Footer () { (
     <div className=' h-4/5' >
     <footer class="p-4  bg-slate-600 sm:p-6 dark:bg-gray-800" >
       <Outlet/>
@@ -74,4 +74,5 @@ const Footer = () => (
     </footer>
   </div>
     );
-    export default Footer;
+};
+    export default Footer

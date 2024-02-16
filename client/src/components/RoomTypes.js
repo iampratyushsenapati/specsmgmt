@@ -2,7 +2,7 @@ import React from 'react'
 import standardroom from '../assets/slider1.jpg'
 import premiumroom from '../assets/slider2.jpg'
 import luxuryroom from '../assets/slider4.jpg'
-const RoomType = () => {
+const RoomTypes = () => {
   return (
    <div className='w-full py-[10rem] px-4 bg-white'>
     <div className='max-w-[1240px] mx-auto grid md:grid-cols-3 gap-5'>
@@ -42,4 +42,4 @@ const RoomType = () => {
   )
 }
 
-export default RoomType
+export default RoomTypes
