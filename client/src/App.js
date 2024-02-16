@@ -8,6 +8,7 @@ import UpdateHotelinfo from'./components/UpdateHotelinfo';
 import HotelCard from'./components/HotelCard'
 import Home from './components/Home';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 
 
@@ -20,10 +21,12 @@ const App=() =>{
     <Route exact path='/' element={<Home/>}/>
       <Route  path='/all-hotel' element={<ShowHotellist/>}/>
       <Route  path='/create-hotel/' element={<CreateHotel/>}/>
-      <Route  path='/edit-hotel/' element={<UpdateHotelinfo/>}/>
+      <Route  path='/edit-hotel/:id' element={<UpdateHotelinfo/>}/>
       <Route  path='/Show-hotel/:id' element={<ShowHotelDetails/>}/>
     </Routes>
+    <Footer/>
   </div>
+  
 </Router>    
   );
 }

@@ -1,4 +1,5 @@
-const express = require("express");
+const express = require("express"); 
+//Load hotel model
 const Hotel = require("../../models/hotel");
 //Handle all the route parameters with ease
 const router = express.Router();
@@ -15,7 +16,7 @@ router.get("/",(req,res) => {
     Hotel.find()
         .then((hotels) => res.json(hotels))
         .catch((err) => req.status(404).json({noticketsfound: 'MongoDB could not the details'}))
-   // res.json({OK: "All hotel route working fine"})
+   res.json({OK: "All hotel route working fine"})
 });
 
 //@route GET api/hotels/:id
@@ -25,11 +26,11 @@ router.get("/",(req,res) => {
 router.get("/:id", (req,res) => {
     Hotel.findById(req.params.id)
         .then((hotel) => res.json(hotel))
-        .catch((err) => res.status(404).json({ nohotelfound: "Could not find the hotel"}))
+        .catch((err) => res.status(404).json({ nohotelfound: "Could not find the hotel"}));
     // res.json({
     //     OK:"Get Hotel By Id route is working fine"
     // })
-})
+});
 
 // @route GET api/hotels/
 // @description Save a new Hotel
@@ -50,28 +51,28 @@ router.post("/", (req,res) => {
 // @access public
 // Find and UPDATE and SEARCH operation
 
-router.put("/", (req,res) => {
+router.put("/:id", (req,res) => {
     Hotel.findByIdAndUpdate(req.params.id, req.body)
         .then((hotel) => res.json( {msg:"This hotel was updated successfully"}))
         .catch((err) => res.status(400).json({ error: "Could not update this hotel"}))
-    // res.json({
-    //     OK:"Update a hotel successfully"
-    // })
-})
+    res.json({
+        OK:"Update a hotel successfully"
+    });
+});
 
 // @route GET api/hotelss/:id
 // @description Find a new hotel by its ID and delete it
 // @access public
 // FIND and DELETE and SEARCH operation
 
-router.delete("/", (req,res) => {
+router.delete("/:id", (req,res) => {
     Hotel.findByIdAndRemove(req.params.id, req.body)
         .then((hotel) => res.json({msg:"This hotel was deleted successfully"}))
         .catch((err) => res.status(404).json({ error: "Could not delete this hotel"}))
-    // res.json({
-    //     OK:"Delete the  hotel successfully"
-    // })
-})
+    res.json({
+        OK:"Delete the  hotel successfully"
+    })
+});
 
 
 module.exports = router;

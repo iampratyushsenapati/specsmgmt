@@ -1,22 +1,21 @@
-import React, {useState ,useEffect}from 'react';
-import{Link ,useParams,useNavigate} from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import '../App.css';
-import Navbar from './Navbar';
-import Footer from './Footer';
+
 
 
 function UpdateHotelinfo(props) {
-    const [hotel, setHotel] = useState({
-      hotel_name: '',
-      customer_name: '',
-      gender: '',
-      place: '',
-      price: '',
-      date: '',
-    });
+  const [hotel, setHotel] = useState({
+    hotel_name: '',
+    customer_name: '',
+    gender: '',
+    place: '',
+    price: '',
+    date: '',
+  });
 
-    const { id } = useParams();
+  const { id } = useParams();
   const navigate = useNavigate();
 
 
@@ -30,7 +29,7 @@ function UpdateHotelinfo(props) {
           gender: res.data.gender,
           place: res.data.place,
           price: res.data.price,
-         date: res.data.date,
+          date: res.data.date,
         });
       })
       .catch((err) => {
@@ -53,26 +52,26 @@ function UpdateHotelinfo(props) {
       place: hotel.place,
       price: hotel.price,
       date: hotel.date,
-      
+
     };
-  
+
 
     axios
-    .put(`/api/hotels/${id}`, data)
-    .then((res) => {
-      navigate(`/show-hotel/${id}`);
-    })
-    .catch((err) => {
-      console.log('Error in UpdateBookInfo PUT request ->');
-      console.log(err)
-    });
-};
+      .put(`/api/hotels/${id}`, data)
+      .then((res) => {
+        navigate(`/show-hotel/${id}`);
+      })
+      .catch((err) => {
+        console.log('Error in UpdateBookInfo PUT request ->');
+        console.log(err)
+      });
+  };
 
-    return(
+  return (
 
-        <div className='UpdateHotelinfo'>
-      {/* <Navbar /> */}
-      
+    <div className='UpdateHotelinfo'>
+
+
       <div className='container'>
         <div className='row'>
           <div className='col-md-8 m-auto'>
@@ -178,9 +177,9 @@ function UpdateHotelinfo(props) {
         </div>
       </div>
 
-      {/* <Footer /> */}
+
     </div>
-  ); 
+  );
 }
 
 export default UpdateHotelinfo

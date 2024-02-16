@@ -5,8 +5,7 @@ import { Slide, ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 import axios from 'axios';
-// import Footer from './Footer';
-// import Navbar from './Navbar';
+
 
 const CreateHotel = (props) => {
 
@@ -61,7 +60,7 @@ const CreateHotel = (props) => {
                 // Delay the navigation slightly to allow the toast to be seen
                 setTimeout(() => {
                     setShowToast(false); // Hide the toast
-                    navigate('/'); // Navigate to homepage
+                    navigate('/all-hotel'); // Navigate to homepage
                 },  5000); // Adjust the timeout as needed
             })
             .catch((err) => {
@@ -88,7 +87,7 @@ const CreateHotel = (props) => {
 
     return (
         <div className='CreateHotel'>
-            {/* <Navbar /> */}
+           
             <ToastContainer
                 position="top-right"
                 autoClose={5000}
