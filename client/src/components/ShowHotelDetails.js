@@ -119,7 +119,7 @@ function ShowHotelDetails  (props)  {
                                         </tr>
                                         <tr>
                                             <th scope='row'>Price</th>
-                                            <td>{hotel.place}</td>
+                                            <td>{hotel.price}</td>
                                         </tr>
                                         <tr>
                                             <th scope='row'>Date</th>
