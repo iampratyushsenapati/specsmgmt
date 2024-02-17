@@ -15,8 +15,8 @@ router.get('/test', (req,res) => {
 router.get("/",(req,res) => {
     Hotel.find()
         .then((hotels) => res.json(hotels))
-        .catch((err) => req.status(404).json({noticketsfound: 'MongoDB could not the details'}))
-   res.json({OK: "All hotel route working fine"})
+        .catch((err) => res.status(404).json({noticketsfound: 'MongoDB could not the details'}))
+
 });
 
 //@route GET api/hotels/:id
@@ -55,9 +55,7 @@ router.put("/:id", (req,res) => {
     Hotel.findByIdAndUpdate(req.params.id, req.body)
         .then((hotel) => res.json( {msg:"This hotel was updated successfully"}))
         .catch((err) => res.status(400).json({ error: "Could not update this hotel"}))
-    res.json({
-        OK:"Update a hotel successfully"
-    });
+    
 });
 
 // @route GET api/hotelss/:id
@@ -69,9 +67,7 @@ router.delete("/:id", (req,res) => {
     Hotel.findByIdAndRemove(req.params.id, req.body)
         .then((hotel) => res.json({msg:"This hotel was deleted successfully"}))
         .catch((err) => res.status(404).json({ error: "Could not delete this hotel"}))
-    res.json({
-        OK:"Delete the  hotel successfully"
-    })
+   
 });
 
 

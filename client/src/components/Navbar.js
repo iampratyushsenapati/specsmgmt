@@ -3,7 +3,7 @@ import { Outlet } from 'react-router-dom'
 function Navbar() {
     return (
         <div>
-        <nav class="   border-gray-200 dark:bg-gray-900 bg-fixed">
+        <nav class="   border-black-200 dark:bg-gray-900 bg-fixed">
           <div class="max-w-7xl flex flex-wrap items-center justify-between h-[53px] mt- mx-auto pb-2">
             <a href="" class="flex items-center space-x-3 rtl:space-x-reverse">
               {/* <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo" /> */}
