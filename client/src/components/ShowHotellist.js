@@ -44,7 +44,6 @@ function ShowHotellist () {
 
                     + Add New Book
                   </Link>
-                 
                   <br />
                   <br />
                   <hr />

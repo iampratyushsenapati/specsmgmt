@@ -64,7 +64,7 @@ router.put("/:id", (req,res) => {
 // FIND and DELETE and SEARCH operation
 
 router.delete("/:id", (req,res) => {
-    Hotel.findByIdAndRemove(req.params.id, req.body)
+    Hotel.findByIdAndDelete(req.params.id, req.body)
         .then((hotel) => res.json({msg:"This hotel was deleted successfully"}))
         .catch((err) => res.status(404).json({ error: "Could not delete this hotel"}))
    

@@ -7,7 +7,7 @@ import ShowHotelDetails from'./components/ShowHotelDetails';
 import UpdateHotelinfo from'./components/UpdateHotelinfo';
 import HotelCard from'./components/HotelCard'
 import Home from './components/Home';
-import Navbar from './components/Navbar';
+// import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
 
@@ -16,7 +16,7 @@ const App=() =>{
   return (
 <Router>
   <div>
-    <Navbar/> 
+    {/* <Navbar/>  */}
     <Routes>
     <Route exact path='/' element={<Home/>}/>
       <Route  path='/all-hotel' element={<ShowHotellist/>}/>
