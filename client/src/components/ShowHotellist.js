@@ -4,59 +4,57 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import HotelCard from './HotelCard';
 
-function ShowHotellist () {
+function ShowHotellist() {
 
-        const [hotels, setHotels] = useState([]);
+  const [hotels, setHotels] = useState([]);
 
-        useEffect(() => {
-          axios
-            .get(`/api/hotels`)
-            .then((res) => {
-              setHotels(res.data);
-            })
-            .catch((err) => {
-              console.log('Error from ShowHotellist ->');
-              console.log(err)
-            });
-        }, []);
-      
-        const hotelList =
-          hotels.length === 0
-            ? 'there is no book record!'
-            : hotels.map((hotel, k) => <HotelCard hotel={hotel} key={k} />);
-      
-        return (
-          <div className='ShowHotellist'>
-            {/* <Navbar /> */}
-      
-            <div className='container'>
-              <div className='row'>
-                <div className='col-md-12'>
-                  <br />
-                  <h2 className='display-4 text-center'>Books List</h2>
-                </div>
-      
-                <div className='col-md-11'>
-                  <Link
-                    to='/create-book'
-                    className='btn btn-outline-warning float-right'
-                  >
+  useEffect(() => {
+    axios
+      .get(`/api/hotels`)
+      .then((res) => {
+        setHotels(res.data);
+      })
+      .catch((err) => {
+        console.log('Error from ShowHotellist ->');
+        console.log(err)
+      });
+  }, []);
 
-                    + Add New Book
-                  </Link>
-                  <br />
-                  <br />
-                  <hr />
-                </div>
-              </div>
+  const hotelList =
+    hotels.length === 0
+      ? 'there is no book record!'
+      : hotels.map((hotel, k) => <HotelCard hotel={hotel} key={k} />);
+
+  return (
+    <div className='ShowHotellist'>
       
-              <div className='list'>{hotelList}</div>
-            </div>
-      
-            {/* <Footer /> */}
+
+      <div className='container'>
+        <div className='row'>
+          <div className='col-md-12'>
+            <br />
+            <h2 className='display-4 text-center'>Room Bookings</h2>
           </div>
-        );
-      }
-      
 
-export default ShowHotellist;
+          <div className='col-md-11'>
+            <Link
+              to='/create-book'
+              className='btn btn-outline-warning float-right'
+            >
+
+              + Add New Hotel
+            </Link>
+            <br />
+            <br />
+            <hr />
+          </div>
+        </div>
+
+        <div className='list'>{hotelList}</div>
+      </div>
+    </div>
+  );
+}
+
+
+export default ShowHotellist

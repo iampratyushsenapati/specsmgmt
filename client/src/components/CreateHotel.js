@@ -61,7 +61,7 @@ const CreateHotel = (props) => {
                 setTimeout(() => {
                     setShowToast(false); // Hide the toast
                     navigate('/all-hotel'); // Navigate to homepage
-                }, 5000); // Adjust the timeout as needed
+                }, 2000); // Adjust the timeout as needed
             })
             .catch((err) => {
                 console.log('Error in CreateBook!');
@@ -185,7 +185,7 @@ const CreateHotel = (props) => {
                 </div>
             </div> */}
 
-            <div class="grid max-w-screen-xl grid-cols-1 gap-8 px-8 py-4 mx-auto rounded-lg md:grid-cols-2  md:px-12 lg:px-16 xl:px-32  text-gray-800">
+            <div class="grid max-w-screen-xl grid-cols-1 gap-8 px-8 py-4 mx-auto rounded-lg md:grid-cols-2  md:px-12 lg:px-16 xl:px-32  text-gray-800 ">
                 <div class="flex flex-col justify-between">
                     <div class="space-y-1">
                         <h2 class="text-4xl font-bold leadi lg:text-5xl">Let's Book!</h2>
@@ -203,7 +203,7 @@ const CreateHotel = (props) => {
 
                             value={hotel.hotel_name}
                             onChange={onChange}
-                            class="w-full p-3 rounded placeholder-gray-400 bg-gray-800 border-blue-200"
+                            class="w-full p-3 rounded placeholder-gray-400  text-white bg-gray-800 border-blue-200"
                         />
                     </div>
                     <div>
@@ -215,7 +215,7 @@ const CreateHotel = (props) => {
 
                             value={hotel.customer_name}
                             onChange={onChange}
-                            class="w-full p-3 rounded bg-gray-800 placeholder-gray-400 border-blue-200" />
+                            class="w-full p-3 rounded bg-gray-800 text-white placeholder-gray-400 border-blue-200" />
                     </div>
 
                     <div>
@@ -227,7 +227,7 @@ const CreateHotel = (props) => {
 
                             value={hotel.gender}
                             onChange={onChange}
-                            class="w-full p-3 rounded bg-gray-800 placeholder-gray-400 border-blue-200 "/>
+                            class="w-full p-3 rounded bg-gray-800 text-white placeholder-gray-400 border-blue-200 "/>
                     </div>
 
                     <div>
@@ -239,7 +239,7 @@ const CreateHotel = (props) => {
 
                             value={hotel.place}
                             onChange={onChange}
-                            class="w-full p-3 rounded bg-gray-800 placeholder-gray-400 border-blue-200" />
+                            class="w-full p-3 rounded bg-gray-800 text-white placeholder-gray-400 border-blue-200" />
                     </div>
 
 
@@ -253,7 +253,7 @@ const CreateHotel = (props) => {
 
                             value={hotel.date}
                             onChange={onChange}
-                            class="w-full p-3 rounded bg-gray-800 placeholder-gray-400 border-blue-200" />
+                            class="w-full p-3 rounded bg-gray-800 text-white border-blue-200" />
                     </div>
 
                     <div>
@@ -264,7 +264,7 @@ const CreateHotel = (props) => {
                             name='price'
                             value={hotel.price}
                             onChange={onChange}
-                            class="w-full p-3 rounded bg-gray-800 placeholder-gray-400 border-blue-200" />
+                            class="w-full p-3 rounded bg-gray-800 text-white placeholder-gray-400 border-blue-200" />
                     </div>
 
 

@@ -31,7 +31,7 @@ function ShowHotelDetails  (props)  {
             .then((res) => {
 
                 // Show the success alert
-                toast.success('Book deleted!', {
+                toast.success('Hotel deleted!', {
                     position: "top-right",
                     autoClose: 5000,
                     hideProgressBar: false,
@@ -47,17 +47,17 @@ function ShowHotelDetails  (props)  {
                 setTimeout(() => {
                     // setShowToast(false); // Hide the toast
                     navigate('/all-hotel'); // Navigate to hotel list
-                }, 5000); // Adjust the timeout as needed
+                }, 2000); // Adjust the timeout as needed
             })
             //Error show
             .catch((err) => {
-                console.log('Error in CreateBook!');
+                console.log('Error in CreateHotel!');
                 console.log('The error is -> ')
                 console.log(err)
 
 
                 // Show the success alert
-                toast.error('Error while deleting the book, please try again!', {
+                toast.error('Error while updating the hotel , please try again!', {
                     position: "top-right",
                     autoClose: 5000,
                     hideProgressBar: false,
