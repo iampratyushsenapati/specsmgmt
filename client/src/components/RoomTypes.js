@@ -4,7 +4,7 @@ import premiumroom from '../assets/slider2.jpg'
 import luxuryroom from '../assets/slider4.jpg'
 const RoomTypes = () => {
   return (
-   <div className='w-full py-[10rem] px-4 bg-white'>
+   <div >
     <div className='max-w-[1240px] mx-auto grid md:grid-cols-3 gap-5'>
         <div className='w-full shadow-xl  text-gray-500  shadow-white flex flex-col my-8  md:-my-0  rounded-lg hover:scale-105 duration-500'>
             <img className='w-20 mx-auto mt-[-3rem] bg-white' src={standardroom} alt='/'/>
