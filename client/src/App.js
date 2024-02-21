@@ -19,7 +19,7 @@ const App=() =>{
   <div>
   <Navbar/>
     <Routes>
-    <Route exact path='/home' element={<Home/>}/>
+    <Route exact path='/' element={<Home/>}/>
       <Route  path='/all-hotel' element={<ShowHotellist/>}/>
       <Route  path='/create-hotel/' element={<CreateHotel/>}/>
       <Route  path='/edit-hotel/:id' element={<UpdateHotelinfo/>}/>
