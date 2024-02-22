@@ -10,10 +10,10 @@ const Home = () => {
     
       <div >
         {/* <!-- component --> */}
-            <div class="container mx-auto flex flex-col md:flex-row items-center my-12 md:my-10  sm:mb-[5px] h-[600px] border border-black ">
+            <div class="container mx-auto flex flex-col md:flex-row items-center  md:my-10 my-12 sm:mb-[5px] h-[600px] top-1 border border-black ">
               <div class="flex flex-col w-full lg:w-1/3 justify-center items-start p-8 ">
-                <h1 class="text-3xl md:text-5xl p-2 text-yellow-300 tracking-loose">  Welcome Here</h1>
-                <p class=" md:text-base text-white  mb-[30px] text-2xl text-center">Enjoy our Services</p>
+                <h1 class="text-6xl md:text-5xl p-2 text-yellow-300 tracking-loose ">  Welcome Here</h1>
+                <p class=" md:text-base text-white  mb-[30px] text-2xl text-center ml-[80px]">Enjoy our Services</p>
                 <a href="#"
                   class="bg-transparent hover:bg-yellow-300 text-yellow-300 hover:text-black rounded shadow hover:shadow-lg py-2 px-4 border border-yellow-300 ">
                   Explore Now</a>
