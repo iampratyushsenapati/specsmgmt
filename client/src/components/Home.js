@@ -47,7 +47,7 @@ const Home = () => {
             <div className='flex flex-col justify-center'>
               <h1 className='text-[25px]  text-white font-serif'>Best Rooms</h1>
               <p className='md:text-3xl sm:text-2xl  text-white text-1xl font-mono py-2'>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of </p>
-              <button className='bg-[black] w-[200px] rounded-md text-yellow-100 my-6 mx-auto py-3'>Get Explore  </button>
+              <button className='bg-[black] w-[200px] rounded-full hover:bg-gray-400 hover:text-black text-white my-6 mx-auto py-3'>Get Explore  </button>
             </div>
           </div>
 

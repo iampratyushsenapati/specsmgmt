@@ -39,11 +39,11 @@ function ShowHotellist() {
 
           <div className='col-md-11'>
             <Link
-              to='/create-book'
+              to='/create-hotel'
               className='btn btn-outline-warning float-right'
             >
 
-              + Add New Hotel
+              + Add New Hotel Rooms
             </Link>
             <br />
             <br />

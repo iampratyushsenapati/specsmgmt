@@ -62,25 +62,25 @@ function Navbar() {
                         </button>
                     </div>
                     <ul class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6">
-                        <li><a class="text-sm text-gray-400 hover:text-gray-500" href="/">Home</a></li>
+                        <li><a class="text-sm text-gray-400 hover:text-white" href="/">Home</a></li>
                         <li class="text-gray-300">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" class="w-4 h-4 current-fill" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
                             </svg>
                         </li>
-                        <li><a class="text-sm text-gray-400 hover:text-gray-500" href="/all-routes">All Routes</a></li>
+                        <li><a class="text-sm text-gray-400 hover:text-white" href="/all-routes">All Routes</a></li>
                         <li class="text-gray-300">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" class="w-4 h-4 current-fill" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
                             </svg>
                         </li>
-                        <li><a class="text-sm text-gray-400 hover:text-gray-500" href="#">Document</a></li>
+                        <li><a class="text-sm text-gray-400 hover:text-white" href="#">Document</a></li>
                         <li class="text-gray-300">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" class="w-4 h-4 current-fill" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
                             </svg>
                         </li>
-                        <li><a class="text-sm text-gray-400 hover:text-gray-500" href="#">Technology</a></li>
+                        <li><a class="text-sm text-gray-400 hover:text-white" href="#">Technology</a></li>
                         <li class="text-gray-300">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" class="w-4 h-4 current-fill" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
@@ -135,7 +135,7 @@ function Navbar() {
                         <div>
                             <ul>
                                 <li class="mb-1">
-                                    <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="#">Home</a>
+                                    <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="/">Home</a>
                                 </li>
                                 <li class="mb-1">
                                     <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="/all-routes">All Routes</a>
@@ -165,9 +165,6 @@ function Navbar() {
                                 </a>
                                 <a class="block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-blue-600 hover:bg-blue-700  rounded-xl" href="#">Sign Up</a>
                             </div>
-                            <p class="my-4 text-xs text-center text-gray-400">
-                                <span>Copyright © 2021</span>
-                            </p>
                         </div>
                     </nav>
                 </div>
